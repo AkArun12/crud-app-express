@@ -20,7 +20,7 @@
 
                     <div class="mb-3">
                         <label for="salary" class="form-label">Salary</label>
-                        <input type="number" name="salary" id="salary" class="form-control">
+                        <input type="number" name="salary" id="salary" class="form-control" placeholder="Minimum 10K">
                     </div>
 
                     <div> 
@@ -55,8 +55,21 @@
                         <td><%=item.age %></td>
                         <td><%=item.salary %></td>
                         <td >
-                            <i class="fas fa-pen-square text-info px-2"></i>
-                            <i class="fas fa-trash text-danger"></i>
+                            <form action="/employee/edit/<%=item._id %>" method="get" class="d-inline">
+                                <button type="submit" class="btn "> 
+                                     <i class="fas fa-pen-square text-info px-2"></i>
+                                </button>
+
+                            </form>
+                          
+                            <form action="/employee/delete/<%=item._id %>" method="post" class="d-inline">
+                                <button type="submit" class="btn "> 
+                                     <i class="fas fa-trash text-danger"></i>
+                                </button>
+
+                            </form>
+                          
+                            
                         </td>
 
                         </tr>

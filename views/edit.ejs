@@ -7,20 +7,20 @@
         Update Employee
       </h2>
 
-      <form method="post">
+      <form method="post" action="/employee/update/<%= data._id %>">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" name="name" id="name" class="form-control" />
+          <input type="text" name="name" id="name" class="form-control" value="<%=data.name%>"/>
         </div>
 
         <div class="mb-3">
           <label for="age" class="form-label">Age</label>
-          <input type="number" name="age" id="age" class="form-control" />
+          <input type="number" name="age" id="age" class="form-control" value="<%=data.age%>" >
         </div>
 
         <div class="mb-3">
           <label for="salary" class="form-label">Salary</label>
-          <input type="number" name="salary" id="salary" class="form-control" />
+          <input type="number" name="salary" id="salary" class="form-control" value="<%=data.salary %>" />
         </div>
 
         <div class="flex">
